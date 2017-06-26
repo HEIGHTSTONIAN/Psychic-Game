@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-	<meta charset="=UTF-8">
+	<meta charset="UTF-8">
 
 	<title>The Psychic Game</title>
 </head>
@@ -11,40 +11,62 @@
 <body>
 
 <h1>The Psychic Game</h1>
+<h2>Guess what letter I'm thinking</h2>
+<h3>Wins:</h3>
+<h3>Losses</h3>
+<h3>Guesses Left:</h3>
+<h4>Your Guesses So Far:</h4>
 
-	<script>
+
+<script type="text/javascript">
+
+//open webpage
+//present a greeting to play The Psychic Game
+//Ask user to choose a letter among the alphabet
+//gather number of guesses
+//inform user about number of guesses made
+//inform user about number of guesses left
+//inform user if they've guessed correctly by declaring them psychic
+//or
+//inform user if they are now psychic based on correct guesses
+
 
 //keys//
+
 
 	var letterChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 
 //variables declared and assigned
+
 	var wins = 0;
 	var losses = 0;
-	var guessesleft = 10;
+	var guessesleft = 9;
 	var yourguessessofar = [];
 	var letterstoguess = null;
 	
 
 //computer picks a letter
 
- var computerGuess = (letterChoices * letterChoices.length);	
-
-//player guesses and either wins or loses
-//functions?
-
-	var updateletterstoguess = function(guess) {
-		document.write('#guessesleft').innerHTML = 
-
-	}
-
-	var updateyourguessessofar = function(keyssofar) {
-		document.write('#guesssofar').innerHTML = ""	
-	}
+var computerGuess = letterChoices [Math.floor(Math.random()*letterChoices.length)];
 
 
-	var updateguessesLeft = function(lettersleft)
+//player guesses
+
+	
+	var secondfunction = function(keyssofar) {
+		document.write('#guesssofar').innerHTML = ('')	
+	};
+
+var letterstoguess = function(guess) {
+		document.write('#letterstoguess').innerHTML = null
+
+	};
+
+	var thirdfunction = function(lettersleft) {
+		document.write("#guessesleft")
+	};
+	
 
 updateguessesLeft();
 updateletterstoguess();
@@ -53,17 +75,34 @@ updateletterstoguess();
 
 //logs guesses to the console
 
-function 
+function console.log(array) {
 
-console.log("")
+	for (var wins = 0; wins < array.length; wins++ {
+}
 
-function
+function console.log(array) {
 
-console.log
+	for (var losses = 0; losses < array.length; losses++ {
+}
 
-function
+function console.log(array) {
 
-console.log
+	for (var guessesleft = 9; guessesleft < array.length; guessesleft++ {
+}
+
+function console.log(array) {
+
+	for (var yourguessessofar = 0; yourguessessofar < array.length; yourguessessofar++ {
+}
+
+function console.log(array) {
+
+	for (var letterstoguess = 0; letterstoguess < array.length; letterstoguess=null {
+}
+
+
+
+
 
   //Start again
 
@@ -79,9 +118,11 @@ console.log
 
 //if you win or  if you lose goes here somewhere
 
-	if (guessesleft > 0) {
-		if (userGuess = letterstoguess) {
-			wins;
+	if (guesses != 0) {
+		letteersGuessed += key + ', ';
+		if (key == letterstoguess) {
+			wins++;
+			display.innerHTML = 
 			alert('You Are Psychic After all!');
 				restart();
 		} 
@@ -89,7 +130,7 @@ console.log
 
 	}
 
-	else if (guessesleft = 0) {
+	else if (guessesleft != 0) {
 		losses;
 		docuement.('#losses').
 		innerHTML = 'losses' + losses;
@@ -100,7 +141,11 @@ console.log
 //You're Psychic After all!
 //You aren't psychic
 
-
+//object
+//function
+//this
+//event
+//onkeyup
 
 	</script>
 </body>
