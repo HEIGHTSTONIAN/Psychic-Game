@@ -29,18 +29,18 @@
 
 //computer picks a letter
 
-	var computerGuess = letterChoices 
-	
+ var computerGuess = (letterChoices * letterChoices.length);	
+
 //player guesses and either wins or loses
 //functions?
 
 	var updateletterstoguess = function(guess) {
-		document.??('#guessesleft') = 
+		document.write('#guessesleft').innerHTML = 
 
 	}
 
 	var updateyourguessessofar = function(keyssofar) {
-		document.queryselector('#guesssofar').innerHTML = ""	
+		document.write('#guesssofar').innerHTML = ""	
 	}
 
 
@@ -51,30 +51,54 @@ updateletterstoguess();
 
 //more functions go here somewhere... starting with pieces of it...
 
+//logs guesses to the console
 
 function 
 
-function
+console.log("")
 
 function
+
+console.log
+
+function
+
+console.log
+
+  //Start again
+
+    var reset = function() {
+        GuessesLeft = 9;
+        AllGuesses = 9;
+        guessedLetters = [];
+        
+        updateGuessesSoFar();
+        updateGuessesLeft();
+        updateLetterToGuess();
 
 
 //if you win or  if you lose goes here somewhere
 
 	if (guessesleft > 0) {
-		if (userGuess = wins) 
+		if (userGuess = letterstoguess) {
+			wins;
+			alert('You Are Psychic After all!');
+				restart();
+		} 
 	}
 
 	}
 
 	else if (guessesleft = 0) {
 		losses;
+		docuement.('#losses').
+		innerHTML = 'losses' + losses;
+		alert('You aren't psychic')
 
 	}
 
 //You're Psychic After all!
 //You aren't psychic
-
 
 
 
