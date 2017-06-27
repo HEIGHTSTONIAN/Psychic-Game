@@ -1,152 +1,81 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-
-	<title>The Psychic Game</title>
+    <meta charset="UTF-8">
+    <title>The Psychic Game</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-<h1>The Psychic Game</h1>
-<h2>Guess what letter I'm thinking</h2>
-<h3>Wins:</h3>
-<h3>Losses</h3>
-<h3>Guesses Left:</h3>
-<h4>Your Guesses So Far:</h4>
-
-
-<script type="text/javascript">
-
-//open webpage
-//present a greeting to play The Psychic Game
-//Ask user to choose a letter among the alphabet
-//gather number of guesses
-//inform user about number of guesses made
-//inform user about number of guesses left
-//inform user if they've guessed correctly by declaring them psychic
-//or
-//inform user if they are now psychic based on correct guesses
+    <h1>The Psychic Game</h1>
+    <h2>Guess what letter I'm thinking</h2>
+    <h3>Wins:</h3>
+    <h3>Losses</h3>
+    <h3>Guesses Left:</h3>
+    <h4>Your Guesses So Far:</h4>
+    <script type="text/javascript">
+    //open webpage
+    //present a greeting to play The Psychic Game
+    //Ask user to choose a letter among the alphabet
+    //gather number of guesses
+    //inform user about number of guesses made
+    //inform user about number of guesses left
+    //inform user if they've guessed correctly by declaring them psychic
+    //or
+    //inform user if they are now psychic based on correct guesses
 
 
-//keys//
+    //keys//
 
 
-	var letterChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    var letterChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 
-//variables declared and assigned
+    //variables declared and assigned
 
-	var wins = 0;
-	var losses = 0;
-	var guessesleft = 9;
-	var yourguessessofar = [];
-	var letterstoguess = null;
-	
-
-//computer picks a letter
-
-var computerGuess = letterChoices [Math.floor(Math.random()*letterChoices.length)];
+    var wins = 0;
+    var losses = 0;
+    var guessesleft = 9;
+    var yourguessessofar = [];
+    var letterstoguess = null;
 
 
-//player guesses
+    document.onkeyup = function(event) {
 
-	
-	var secondfunction = function(keyssofar) {
-		document.write('#guesssofar').innerHTML = ('')	
-	};
+            var letter = event.key;
+            var alphabet = [];
+            var computerGuess = Math.floor(Math.random) * alphabet.length;
+            var computer = alphabet[computerGuess];
+            console.log(userGuess)
 
-var letterstoguess = function(guess) {
-		document.write('#letterstoguess').innerHTML = null
 
-	};
+            if (userGuess === computerGuess) {
+                wins++;
+                document.querySelector('#wins').innerHTML = 'Wins: ' + wins;
+                alert("How did you know!? You're psychic!");
+                reset();
+            } else(guessesLeft === 0) {
+                losses++;
+                guessesleft--;
+                document.write("You aren't psychic after all")
+            }
 
-	var thirdfunction = function(lettersleft) {
-		document.write("#guessesleft")
-	};
-	
 
-updateguessesLeft();
-updateletterstoguess();
-
-//more functions go here somewhere... starting with pieces of it...
-
-//logs guesses to the console
-
-function console.log(array) {
-
-	for (var wins = 0; wins < array.length; wins++ {
-}
-
-function console.log(array) {
-
-	for (var losses = 0; losses < array.length; losses++ {
-}
-
-function console.log(array) {
-
-	for (var guessesleft = 9; guessesleft < array.length; guessesleft++ {
-}
-
-function console.log(array) {
-
-	for (var yourguessessofar = 0; yourguessessofar < array.length; yourguessessofar++ {
-}
-
-function console.log(array) {
-
-	for (var letterstoguess = 0; letterstoguess < array.length; letterstoguess=null {
-}
+            var computerGuess = letterChoices[Math.floor(Math.random() * letterChoices.length)];
 
 
 
 
+            //You're Psychic After all!
+            //You aren't psychic
 
-  //Start again
-
-    var reset = function() {
-        GuessesLeft = 9;
-        AllGuesses = 9;
-        guessedLetters = [];
-        
-        updateGuessesSoFar();
-        updateGuessesLeft();
-        updateLetterToGuess();
-
-
-//if you win or  if you lose goes here somewhere
-
-	if (guesses != 0) {
-		letteersGuessed += key + ', ';
-		if (key == letterstoguess) {
-			wins++;
-			display.innerHTML = 
-			alert('You Are Psychic After all!');
-				restart();
-		} 
-	}
-
-	}
-
-	else if (guessesleft != 0) {
-		losses;
-		docuement.('#losses').
-		innerHTML = 'losses' + losses;
-		alert('You aren't psychic')
-
-	}
-
-//You're Psychic After all!
-//You aren't psychic
-
-//object
-//function
-//this
-//event
-//onkeyup
-
-	</script>
+            //object
+            //function
+            //this
+            //event
+            //onkeyup
+    </script>
 </body>
+
 </html>
