@@ -1,81 +1,36 @@
 <!DOCTYPE html>
+<!--Determine english language -->
+
 <html lang="en">
 
 <head>
+<!--in the head, inlude the script tag with the path to the .js file
+meta tag reaches for browser support, which is why we love Chrome
+-->
+    <script src="assets/javascript/game.js"></script>
     <meta charset="UTF-8">
     <title>The Psychic Game</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+<!--open webpage
+//get user to guess  a letter and tabulate wins, losses, remaning lives/chances, print keys pressed
+//using javascript, linked herein, see if they're psychic or not. -->
+
     <h1>The Psychic Game</h1>
-    <h2>Guess what letter I'm thinking</h2>
-    <h3>Wins:</h3>
-    <h3>Losses</h3>
-    <h3>Guesses Left:</h3>
-    <h4>Your Guesses So Far:</h4>
-    <script type="text/javascript">
-    //open webpage
-    //present a greeting to play The Psychic Game
-    //Ask user to choose a letter among the alphabet
-    //gather number of guesses
-    //inform user about number of guesses made
-    //inform user about number of guesses left
-    //inform user if they've guessed correctly by declaring them psychic
-    //or
-    //inform user if they are now psychic based on correct guesses
 
+    <div id="game">
+        <h2>Guess what letter I'm thinking of</h2>
+        <h3>Wins: </h3>
+        <h3>Losses: </h3>
+        <h3>Guesses Left: 9</h3>
+        <h3>Your Guess So far: </h3>
 
-    //keys//
+<!--Script tag here allows js to load last onto the page so it doesn't slow it down. Good habit to have for bigger projects-->
+    <script type="text/javascript"></script>
 
+    <head>
 
-    var letterChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-
-    //variables declared and assigned
-
-    var wins = 0;
-    var losses = 0;
-    var guessesleft = 9;
-    var yourguessessofar = [];
-    var letterstoguess = null;
-
-
-    document.onkeyup = function(event) {
-
-            var letter = event.key;
-            var alphabet = [];
-            var computerGuess = Math.floor(Math.random) * alphabet.length;
-            var computer = alphabet[computerGuess];
-            console.log(userGuess)
-
-
-            if (userGuess === computerGuess) {
-                wins++;
-                document.querySelector('#wins').innerHTML = 'Wins: ' + wins;
-                alert("How did you know!? You're psychic!");
-                reset();
-            } else(guessesLeft === 0) {
-                losses++;
-                guessesleft--;
-                document.write("You aren't psychic after all")
-            }
-
-
-            var computerGuess = letterChoices[Math.floor(Math.random() * letterChoices.length)];
-
-
-
-
-            //You're Psychic After all!
-            //You aren't psychic
-
-            //object
-            //function
-            //this
-            //event
-            //onkeyup
-    </script>
 </body>
-
 </html>
