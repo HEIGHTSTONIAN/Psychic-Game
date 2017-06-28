@@ -5,7 +5,7 @@ var key = ["a", "b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
 var wins = 0;
 var losses = 0;
 var turns = 9;
-var guess = "";
+var guess = ""; 
 
 //input recorded once the user lets up from a keystroke. this is assigned to a function that will record the keystroke event. this is the first function once the user is presented with the game so it's the first on the list.//
 document.onkeyup = function(event) {
